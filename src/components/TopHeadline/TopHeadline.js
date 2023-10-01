@@ -31,12 +31,12 @@ const TopHeadline = () => {
   return (
     <div>
         <Box sx={{ width: '100%' }}>
-            <Grid container spacing={{ xs: 2, md: 3 }}>
+            <Grid container spacing={{ xs: 2, md: 3 }} style={{textAlign: 'center'}}>
 
                     {articles.map(article => {
                         return(
-                            <Grid item xs={12} sm={6} lg={4} style={{width: 'calc(100% * 4 / var(--Grid-columns))'}}>
-                                <Item key={uuidv4()} style={{backgroundColor: '#efefef', padding: '20px'}}>
+                            <Grid item xs={12} sm={12} md={6} lg={4}>
+                                <Item key={uuidv4()} style={{backgroundColor: '#efefef', padding: '20px', display: 'flex', justifyContent: 'center'}}>
                                     <News article={article} />
                                 </Item>
                             </Grid>
