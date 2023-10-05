@@ -31,17 +31,19 @@ const TopHeadline = () => {
   return (
     <div>
         <Box sx={{ width: '100%' }}>
+            <div style={{textAlign: 'center'}}>
+                <h3 style={{display: 'inline-block', marginTop: '0px'}}>Total News: {articles.length}</h3>
+            </div>
             <Grid container spacing={{ xs: 2, md: 3 }} style={{textAlign: 'center'}}>
-
-                    {articles.map(article => {
-                        return(
-                            <Grid item xs={12} sm={12} md={6} lg={4}>
-                                <Item key={uuidv4()} style={{backgroundColor: '#efefef', padding: '20px', display: 'flex', justifyContent: 'center'}}>
-                                    <News article={article} />
-                                </Item>
-                            </Grid>
-                        )
-                    })}
+                {articles.map(article => {
+                    return(
+                        <Grid item xs={12} sm={12} md={6} lg={4}>
+                            <Item key={uuidv4()} style={{backgroundColor: '#efefef', padding: '20px', display: 'flex', justifyContent: 'center'}}>
+                                <News article={article} />
+                            </Item>
+                        </Grid>
+                    )
+                })}
 
             </Grid>
         </Box>
